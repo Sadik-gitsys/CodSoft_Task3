@@ -27,4 +27,4 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", round(accuracy * 100, 1), "%")
 
 joblib.dump(model, "spam_model.pkl")
-joblib.dump(vectorizer, "tfidf_vectorizer.pkl")
+joblib.dump(vectorizer, "vectorizer.pkl")
