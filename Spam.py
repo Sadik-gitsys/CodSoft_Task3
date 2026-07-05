@@ -1,4 +1,5 @@
 import pandas as pd
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -24,3 +25,6 @@ y_pred = model.predict(X_test)
 
 accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", round(accuracy * 100, 1), "%")
+
+joblib.dump(model, "spam_model.pkl")
+joblib.dump(vectorizer, "tfidf_vectorizer.pkl")
