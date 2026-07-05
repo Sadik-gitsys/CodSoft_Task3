@@ -1,4 +1,9 @@
+import joblib
 
+model = joblib.dump(model, "spam_model.pkl")
+vectorizer = joblib.dump(vectorizer, "vectorizer.pkl")
+
+print("Model Saved Successfully")
 sms = input("Enter SMS: ")
 
 # Convert text into TF-IDF features
